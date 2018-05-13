@@ -14,7 +14,7 @@ Button.prototype = {
         });
         $('body').append(this.$element);
     }
-}
+};
 
 //use create method
 var btn1 = new Button('Hello!');
