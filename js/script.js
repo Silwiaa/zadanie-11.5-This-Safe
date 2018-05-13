@@ -3,9 +3,21 @@ function Button(text) {
     this.text = text || 'Hello';
 }
 
-//create protorype function
+//create prototype
 Button.prototype = {
     create: function() {
-        
+        var self = this;
+        this.$element = $('<button>');
+        this.$element.text(this.text);
+        this.$element.click(function() {
+            alert(self.text);
+        });
+        $('body').append(this.$element);
     }
 }
+
+//use create method
+var btn1 = new Button('Hello!');
+
+//create new object
+btn1.create();
